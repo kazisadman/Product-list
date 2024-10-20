@@ -1,6 +1,6 @@
 const ProductSearch = () => {
   return (
-    <div className="w-2/4 mx-auto cursor-pointer">
+    <div className="w-2/4 mx-auto cursor-pointer my-10">
       <label className="input input-bordered flex items-center gap-2">
         <input type="text" className="grow" placeholder="Search" />
         <svg
