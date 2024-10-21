@@ -4,7 +4,7 @@ import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 const SkeletonLoading:React.FC = () => {
   return (
     <div>
-      <SkeletonTheme baseColor="#202020" highlightColor="#444">
+      <SkeletonTheme highlightColor="#f5f5f5">
         <div className="card bg-base-100 h-[500px] shadow-xl">
           <div>
             <Skeleton height={270} />
