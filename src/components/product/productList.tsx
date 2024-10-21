@@ -15,7 +15,7 @@ const ProductList = () => {
         window.innerHeight + document.documentElement.scrollTop >=
         document.documentElement.scrollHeight
       ) {
-        setProductAmount((prev) => prev + 8);
+        setProductAmount((prev) => prev + 4);
       }
     } catch (error) {
       console.log(error);
@@ -24,7 +24,8 @@ const ProductList = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", handleInfiniteScroll);
-  }, [productAmount]);
+    return () => window.addEventListener("scroll", handleInfiniteScroll);
+  }, []);
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-3 px-4 md:px-0">

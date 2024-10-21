@@ -12,3 +12,8 @@ export interface TProduct {
   image: string;
   rating: TRating;
 }
+
+export interface TCartState {
+  totalQuantity: number;
+  totalPrice: number;
+}
