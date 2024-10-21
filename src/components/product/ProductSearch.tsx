@@ -1,13 +1,28 @@
+import { useDispatch } from "react-redux";
+import { searchQuery } from "../../redux/features/searchSlice";
+import { ChangeEvent } from "react";
+
 const ProductSearch = () => {
+  const dispatch = useDispatch();
+
+  const handleSearchQuery = (e: ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    dispatch(searchQuery(value));
+  };
   return (
-    <div className="w-2/4 mx-auto cursor-pointer my-10">
+    <form className="w-2/4 mx-auto  my-10">
       <label className="input input-bordered flex items-center gap-2">
-        <input type="text" className="grow" placeholder="Search" />
+        <input
+          type="text"
+          className="grow"
+          placeholder="Search"
+          onChange={handleSearchQuery}
+        />
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 16 16"
           fill="currentColor"
-          className="h-4 w-4 opacity-70"
+          className="h-4 w-4 opacity-70 cursor-pointer"
         >
           <path
             fillRule="evenodd"
@@ -16,7 +31,7 @@ const ProductSearch = () => {
           />
         </svg>
       </label>
-    </div>
+    </form>
   );
 };
 

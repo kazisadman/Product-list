@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { productApi } from "./api/productApi";
 import cartReducer from "./features/cartSlice";
+import searchReducer from "./features/searchSlice";
 import storage from "redux-persist/lib/storage";
 import { persistReducer, persistStore } from "redux-persist";
 
@@ -15,6 +16,7 @@ export const store = configureStore({
   reducer: {
     [productApi.reducerPath]: productApi.reducer,
     cart: persistedReducer,
+    search: searchReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(productApi.middleware),

@@ -11,7 +11,10 @@ export const productApi = createApi({
     getAllProducts: builder.query<TProduct[],number>({
       query: (productAmount) => `products?limit=${productAmount}`,
     }),
+    getSearchedProducts: builder.query<TProduct[],void>({
+      query: () => 'products',
+    }),
   }),
 });
 
-export const { useGetAllProductsQuery } = productApi;
+export const { useGetAllProductsQuery,useGetSearchedProductsQuery } = productApi;
