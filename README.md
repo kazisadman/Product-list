@@ -1,50 +1,50 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Shopy - E-Commerce Store
 
-Currently, two official plugins are available:
+**Description:** 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is a Front-end project developed by modern technology such as **React**,**TypeScript**, **Redux Toolkit**,**Tailwind & DaisyUI**.Here user can see listed product, search product and can add product to cart.
 
-## Expanding the ESLint configuration
+Main features are - 
+- Feature 1: Add product to cart
+- Feature 2: Search product 
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+This project is created to demonstrate efficient API usage, Component-based development, state management with scalability.
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+
+
+
+## Steps to run the app locally
+
+1.Clone the repository:
+
+```bash
+ https://github.com/kazisadman/Product-list.git
 ```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+2.Navigate to the project directory:
+```bash
+cd Product-list
 ```
+3.Install dependencies:
+```bash
+npm install
+```
+5.Start the application:
+```bash
+npm run dev
+```
+## Key Architecture
+
+The project is built using **React** with a component-based architecture. We opted for **React** due to its efficient DOM rendering and scalability for building interactive user interfaces.
+
+- **State Management**: We use **Redux ToolKit** to manage the global state for the cart. This allows us to maintain consistent state across components.
+  
+- **Styling**: We use **Tailwind CSS & DaisyUI** for styling to ensure consistency in the UI and to speed up development. Its responsive design features help maintain a uniform look across devices.
+
+- **Data Fetching**: We use **RTK Query** for efficient data fetching and caching. It simplifies the process of making API requests, automatically managing loading states, caching responses, and handling errors.
+
+- **Type Safety**: We use **Typescript** accrossed the project to maintain strong type safety and API interection.
+
+
+
