@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { TCartState } from "../../types/product.type";
+import { TCartState } from "../../types/cart.type";
 
 const initialState: TCartState = {
   totalPrice: 0,

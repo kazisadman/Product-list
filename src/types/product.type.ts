@@ -13,7 +13,3 @@ export interface TProduct {
   rating: TRating;
 }
 
-export interface TCartState {
-  totalQuantity: number;
-  totalPrice: number;
-}

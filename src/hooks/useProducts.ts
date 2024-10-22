@@ -14,6 +14,7 @@ export const useProducts = (productAmount: number) => {
     (state: RootState) => state.search.searchTerm
   );
 
+  // checks if search keyword match with any word in the title
   const searchedProduct = allProductData?.filter((item) =>
     item.title.toLowerCase().includes(searchQuery.toLowerCase())
   );

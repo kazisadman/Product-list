@@ -14,10 +14,13 @@ const ProductList = () => {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-3 px-4 md:px-0">
+      {/* To show 8 cards while Loading */}
       {isLoading &&
         Array(8)
           .fill(0)
           .map((_, index) => <SkeletonLoading key={index}></SkeletonLoading>)}
+
+      {product?.length === 0 && <h1>No Product Matched</h1>}
 
       {product?.map((item) => (
         <ProductCard key={item.id} data={item}></ProductCard>
